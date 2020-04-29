@@ -5,7 +5,7 @@ import java.util.concurrent.ThreadLocalRandom;
 public class Example3 {
 
     public static void main(String[] args) {
-        System.out.println("Введите количество генерируемых ");
+        System.out.println("Введите количество людей в массиве ");
         Scanner scan = new Scanner(System.in);
         int x = scan.nextInt();
         Example3.Person[] persons = new Example3.Person[x];
