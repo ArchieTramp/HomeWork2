@@ -1,50 +1,3 @@
-//
-//public class Example3 {
-//    public static void main(String[] args) {
-//        int i;
-//        System.out.print("Введите количество генерируемых чисел ");
-//        Scanner scan = new Scanner(System.in);
-//        int j = scan.nextInt();
-//        String[] name = new String[j];
-//        int[] age = new int[j];
-//        String[] sex = new String[j];
-//        String[][] array = new String[3][j];
-//        for (i = 0; i < j; i++) {
-//            int agegen = (int) (Math.random() * 100);//генератор возраста
-//            age[i] = agegen;
-//            array[0][i] = String.valueOf(age[i]);
-//
-//
-//
-//            int sextype = (int) (Math.random());//генератор пола
-//            if (sextype == 0) {
-//                sex[i] = "man";
-//            } else {
-//                sex[i] = "woman";
-//            }
-//            array[1][i] = sex[i];
-//
-//
-//
-//            final ThreadLocalRandom random = ThreadLocalRandom.current();//генератор имени
-//            final int nums = random.nextInt(5, 11);
-//            StringBuilder names = new StringBuilder();
-//            for (int t = 0; t < nums; t++) {
-//                names.append((char) random.nextInt(97, 123));
-//            }
-//            name[i] = names.toString();
-//            array[2][i] = name[i];
-//
-//
-//        }
-//
-//
-//
-//        }
-//
-//
-//    }
-
 import java.util.Arrays;
 import java.util.Scanner;
 import java.util.concurrent.ThreadLocalRandom;
@@ -55,16 +8,25 @@ public class Example3 {
         System.out.println("Введите количество генерируемых ");
         Scanner scan = new Scanner(System.in);
         int x = scan.nextInt();
-        String Person[] = new String[x];
-        new Example3
-                (new Person[]{
+        Example3.Person[] persons = new Example3.Person[x];
+        int y;
+        for (y = 0; y < x; y++) {
+            new Example3
 
-                        new Person(0, 0, "name"),
-                        new Person(0, 0, "name"),
+                    (new Person[]{
 
-                }).SortPerson();
+                            persons[y] = new Person(0, 0, "name")
+
+
+                    }).SortPerson();
+
+        }
+        System.out.println(Arrays.toString(persons));
+
+
 
     }
+
 
     private Person[] persons;
 
@@ -72,19 +34,20 @@ public class Example3 {
 
         this.persons = persons;
 
+
     }
 
     public void SortPerson() {
-        Arrays.sort(persons, (person1, person2) -> {
-            if (person1.sex != person2.sex) {
+        Arrays.sort(persons, (persons1, persons2) -> {
+            if (persons1.sex != persons2.sex) {
                 return
-                        person1.sex == 0 ? 1 :
-                                person2.sex == 0 ? -1 :
-                                        person1.sex == 1 ? 1 : -1;
-            } else if (person1.age != person2.age) {
-                return Integer.compare(person1.age, person2.age);
-            } else if (!person1.name.equals(person2.name)) {
-                return -person1.name.compareTo(person2.name);
+                        persons1.sex == 0 ? 1 :
+                                persons2.sex == 0 ? -1 :
+                                        persons1.sex == 1 ? 1 : -1;
+            } else if (persons1.age != persons2.age) {
+                return Integer.compare(persons1.age, persons2.age);
+            } else if (!persons1.name.equals(persons2.name)) {
+                return -persons1.name.compareTo(persons2.name);
             }
             return 0;
         });
@@ -98,8 +61,7 @@ public class Example3 {
         String name;
 
         public Person(int sex, int age, String name) {
-            int agegen = (int) (Math.random() * 100);//генератор возраста
-            age = agegen;
+            age = (int) (Math.random() * 100);
 
             final ThreadLocalRandom random = ThreadLocalRandom.current();//генератор имени
             final int nums = random.nextInt(5, 11);
@@ -109,8 +71,9 @@ public class Example3 {
             }
             name = names.toString();
 
-            sex = (int) (Math.random() * 2);
-//            if (sextype == 0) {
+
+            sex = (int) (Math.random() + 0.5);
+//            if (sex == 0) {
 //                sex = "man";
 //            } else {
 //                sex = "woman";
@@ -126,9 +89,3 @@ public class Example3 {
 }
 
 
-
-//enum Sex{
-//
-//    man, woman
-//
-//}
