@@ -61,7 +61,7 @@ public class Example3 {
 
         @Override
         public String toString() {
-            return super.toString();
+            return "persona " + name + " " + sex + " " + age + "лет";
         }
 
         public Person(int sex, int age, String name) {
