@@ -19,14 +19,14 @@ public class generator {
                 if ((myArrays[i] * myArrays[i]) == myArray[i]) {
                     System.out.println(myArray[i]);
                 }
-            } else try {
-            } catch (Exception e) {
-                throw new Exception(e);
+            } else throw new Exception("e");// try {
+//            } catch (Exception e) {
+//                throw new Exception(e);
 
-            } finally {
-                System.out.println("в массив было сгенерировано отрицательное число в элемент " + i);
+//            } finally {
+//                System.out.println("в массив было сгенерировано отрицательное число в элемент " + i);
 
             }
         }
     }
-}
+
