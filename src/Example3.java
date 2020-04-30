@@ -15,7 +15,7 @@ public class Example3 {
                              }
         new Example3 (persons).sortPerson();
         System.out.println(Arrays.toString(persons));
-        }
+          }
 
 
 
