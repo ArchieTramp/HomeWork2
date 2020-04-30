@@ -4,11 +4,6 @@ import java.util.concurrent.ThreadLocalRandom;
 
 public class Example3 {
 
-    @Override
-    public String toString() {
-        return super.toString();
-    }
-
     public static void main(String[] args) {
         System.out.println("Введите количество людей в массиве ");
         Scanner scan = new Scanner(System.in);
@@ -64,6 +59,11 @@ public class Example3 {
         int age;
         String name;
 
+        @Override
+        public String toString() {
+            return super.toString();
+        }
+
         public Person(int sex, int age, String name) {
             age = (int) (Math.random() * 100);
 
@@ -81,6 +81,7 @@ public class Example3 {
             this.sex = sex;
             this.age = age;
             this.name = name;
+
         }
 
 
