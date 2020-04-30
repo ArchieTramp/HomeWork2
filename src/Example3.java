@@ -8,20 +8,19 @@ public class Example3 {
         System.out.println("Введите количество людей в массиве ");
         Scanner scan = new Scanner(System.in);
         int x = scan.nextInt();
-        Example3.Person[] persons = new Example3.Person[x];
+        Person[] persons = new Person[x];
         int y;
         for (y = 0; y < x; y++) {
-            new Example3
-
-                    (new Person[]{
+            new Example3 (
+                            new Person[]{
 
                             persons[y] = new Person(0, 0, "name")
 
+                             });
 
-                    }).SortPerson();
 
         }
-        System.out.println(Arrays.toString(persons));
+                System.out.println(Arrays.toString(persons));
 
 
 
@@ -33,11 +32,12 @@ public class Example3 {
     public Example3(Person[] persons) {
 
         this.persons = persons;
+        sortPerson();
 
 
     }
 
-    public void SortPerson() {
+    public void sortPerson() {
         Arrays.sort(persons, (persons1, persons2) -> {
             if (persons1.sex != persons2.sex) {
                 return
@@ -63,7 +63,7 @@ public class Example3 {
         public Person(int sex, int age, String name) {
             age = (int) (Math.random() * 100);
 
-            final ThreadLocalRandom random = ThreadLocalRandom.current();//генератор имени
+            final ThreadLocalRandom random = ThreadLocalRandom.current();
             final int nums = random.nextInt(5, 11);
             StringBuilder names = new StringBuilder();
             for (int t = 0; t < nums; t++) {
@@ -73,10 +73,6 @@ public class Example3 {
 
 
             sex = (int) (Math.random() + 0.5);
-//            if (sex == 0) {
-//                sex = "man";
-//            } else {
-//                sex = "woman";
 
             this.sex = sex;
             this.age = age;
