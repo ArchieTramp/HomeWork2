@@ -17,9 +17,8 @@ public class Example3 {
                             persons[y] = new Person(0, 0, "name")
 
                              });
-
-
         }
+
                 System.out.println(Arrays.toString(persons));
 
 
@@ -30,6 +29,7 @@ public class Example3 {
     private Person[] persons;
 
     public Example3(Person[] persons) {
+
 
         this.persons = persons;
         sortPerson();
