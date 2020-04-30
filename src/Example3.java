@@ -4,6 +4,11 @@ import java.util.concurrent.ThreadLocalRandom;
 
 public class Example3 {
 
+    @Override
+    public String toString() {
+        return super.toString();
+    }
+
     public static void main(String[] args) {
         System.out.println("Введите количество людей в массиве ");
         Scanner scan = new Scanner(System.in);
@@ -13,7 +18,9 @@ public class Example3 {
         for (y = 0; y < x; y++) {
              persons[y] = new Person(0, 0, "name");
                              }
+
         new Example3 (persons).sortPerson();
+
         System.out.println(Arrays.toString(persons));
           }
 
