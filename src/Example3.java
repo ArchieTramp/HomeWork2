@@ -13,27 +13,16 @@ public class Example3 {
         for (y = 0; y < x; y++) {
              persons[y] = new Person(0, 0, "name");
                              }
-
         new Example3 (persons).sortPerson();
 
         System.out.println(Arrays.toString(persons));
           }
-
-
-
-
-
-
-
 
     private Person[] persons;
 
     public Example3(Person[] persons) {
 
         this.persons = persons;
-
-
-
     }
 
     public void sortPerson() {
@@ -50,7 +39,6 @@ public class Example3 {
             }
             return 0;
         });
-
     }
 
     static class Person {
@@ -75,7 +63,6 @@ public class Example3 {
             }
             name = names.toString();
 
-
             sex = (int) (Math.random() + 0.5);
 
             this.sex = sex;
@@ -83,7 +70,6 @@ public class Example3 {
             this.name = name;
 
         }
-
 
     }
 
