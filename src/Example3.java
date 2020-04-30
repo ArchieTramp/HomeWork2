@@ -11,28 +11,25 @@ public class Example3 {
         Person[] persons = new Person[x];
         int y;
         for (y = 0; y < x; y++) {
-            new Example3 (
-                            new Person[]{
-
-                            persons[y] = new Person(0, 0, "name")
-
-                             });
+             persons[y] = new Person(0, 0, "name");
+                             }
+        new Example3 (persons).sortPerson();
+        System.out.println(Arrays.toString(persons));
         }
 
-                System.out.println(Arrays.toString(persons));
 
 
 
-    }
+
+
 
 
     private Person[] persons;
 
     public Example3(Person[] persons) {
 
-
         this.persons = persons;
-        sortPerson();
+
 
 
     }
