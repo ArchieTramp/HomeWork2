@@ -8,7 +8,7 @@ public class generator {
         System.out.print("Введите количество генерируемых чисел ");
         Scanner scan = new Scanner(System.in);
         int x = scan.nextInt();
-        System.out.println ("Вы ввели число " + x);
+        System.out.println("Вы ввели число " + x);
         myArray = new double[x];
         myArrays = new double[x];
         for (i = 0; i < x; i++) {

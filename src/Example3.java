@@ -11,12 +11,12 @@ public class Example3 {
         Person[] persons = new Person[x];
         int y;
         for (y = 0; y < x; y++) {
-             persons[y] = new Person(0, 0, "name");
-                             }
-        new Example3 (persons).sortPerson();
+            persons[y] = new Person(0, 0, "name");
+        }
+        new Example3(persons).sortPerson();
 
         System.out.println(Arrays.toString(persons));
-          }
+    }
 
     private Person[] persons;
 
